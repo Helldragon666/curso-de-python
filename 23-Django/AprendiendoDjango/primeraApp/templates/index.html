@@ -1,0 +1,45 @@
+
+
+
+{% extends "./layouts/layout.html" %}
+
+{% block titulo %}
+    {{title}}
+{% endblock %}
+
+{% block contenido %}
+
+    <!--Comentario HTML-->
+
+    {# Comentario en Django #}
+
+    {% comment "Otro comentario en Django" %}
+        <h2>Esto tambien pertenece al comentario</h2>
+    {% endcomment %}
+
+    <h1 class="title" >{{title}}</h1>
+    <p>{{mi_variable}}</p>
+
+    {% if nombre and nombre == 'Yonatan' %}
+        <p>Bienvenido {{nombre}}</p>
+    {% else %}
+        <strong>No existe el nombre o no coincide</sytrong>
+    {% endif %}
+
+    <h3>Listado de lenguajes de programación</h3>
+    <ul>
+        {% for lenguaje in lenguajes %}
+            <li>
+                {{lenguaje}} PRIMER ELEMETO: {{forloop.first}} ULTIMO ELEMENTO {{forloop.last}}
+                Número del elemento: {{forloop.counter}} Número del elemento: {{forloop.counter0}}
+                <br>
+                Número del elemento: {{forloop.revcounter}} Número del elemento: {{forloop.revcounter0}}
+            </li>
+        {% empty %}
+            <p>NO HAY LENGUAJES QUE MOSTRAR</p>
+        {% endfor %}
+    </ul>
+
+    {% include 'fecha_actual.html' with saludo='Holi desde plantilla ;3' only %} {# para incluir templates, with para pasar datos a la template, only para solo heredar los datos pasador en el include #}
+
+{% endblock %}

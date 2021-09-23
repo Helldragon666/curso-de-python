@@ -1,0 +1,27 @@
+
+
+
+{% extends "./layouts/layout.html" %}
+
+{% block titulo %}
+    Pruebas
+{% endblock %}
+
+{% block contenido %}
+    <h1 class="title" >Página de mi web</h1>
+    <p>{{'Todos los derechos reservados'|cut:' '}}</p> {# quitar los espacios #}
+    <p>{{texto|default:'no hay nada'}}</p>
+    <p>
+        {{lista|first}}<br>{{lista|last}}<br>{{lista}}<br>
+        {{lista|join:', '}}<br>{{lista|length}}<br>
+        {{lista|random}}
+    </p>
+    <p>
+        {{'texto prueba'|length}}<br> {{'texto prueba'|upper}}
+        <br> {{'TEXTO PRUEBA'|lower}}
+    </p>
+    <p>{{'<h1>texto</h1> <strong>prueba</strong>'|striptags|wordcount}}</p>
+
+    {% load filters %} {# para cargar el archivo (fichero) filters, los filtros personalizados #}
+    {{'Yonatan Cervantes'|saludo|safe}}
+{% endblock %}

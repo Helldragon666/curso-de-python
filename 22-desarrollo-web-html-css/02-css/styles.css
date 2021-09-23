@@ -1,0 +1,82 @@
+
+* { /*selector universal*/
+    margin: 0px;
+    padding: 0px;
+}
+
+body { /* Selector para una etiqueta HTML */ 
+    background: lightgrey; /* fondo para el elemento body*/
+    font-family: Arial, Helvetica, sans-serif; /* tipo de letra para el elemento body*/
+}
+
+#container { /* Selector para un id HTML */
+    border: 1px solid black;
+    margin: 0px auto; /*Centrar un elemento*/
+    width: 70%;
+}
+
+header {
+    background: red;
+    height: 100px; /*altura*/
+    width: 100%; /*anchura*/
+    margin: 0px;
+    text-align: center; /*centrar texto*/
+    line-height: 100px;
+    color: white;
+    border-bottom: 3px dashed black;
+}
+
+nav ul li {
+    float: left; /*mover a la izquierda*/
+    list-style: none; /*ningun estilo*/
+    margin: 10px;
+    line-height: 30px;
+}
+
+nav {
+    background: lightblue;
+    height: 50px;
+    border-bottom: 1px solid black;
+}
+
+#content {
+    float: left;
+    width: calc(70% - 70px);
+    background: green;
+    min-height: 500px;
+    padding: 40px;
+}
+
+aside {
+    float: left;
+    width: calc(30% - 30px);
+    background: orange;
+    min-height: 560px;
+    padding: 10px;
+}
+
+.article {
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.article:first-child {
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.article h2 {
+    font-size: 25px;
+}
+
+footer {
+    clear: both;
+    background: black;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}

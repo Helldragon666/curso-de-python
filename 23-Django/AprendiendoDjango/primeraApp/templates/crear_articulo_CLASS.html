@@ -1,0 +1,25 @@
+
+
+{% extends "./layouts/layout.html" %}
+
+{% block titulo %}
+    Formularios en Django (Classes)
+{% endblock %}
+
+{% block contenido %}
+    <h1 class="title">Formularios en Django (Classes)</h1>
+
+    {% if form.errors %}
+        <strong class='rojo'>Hay errores</strong>
+       {#  {{form.errors}} lista de errores #}
+    {% endif %}
+
+    <form action="" method="POST">
+
+         {% csrf_token %} {# Para la  verificación CSRF #}
+
+         {{form}} {# {{form.as_ul}} para poner los elementos del formulario dentro de un <li><7li> #}
+        
+        <input type='submit' value='Crear'>
+    </form>
+{% endblock %}

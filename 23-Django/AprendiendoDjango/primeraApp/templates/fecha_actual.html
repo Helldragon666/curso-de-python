@@ -1,0 +1,16 @@
+
+<hr>
+<br>
+<h1>Estamos a {{fecha}}</h1>
+<h2>Bienvenido {{nombre}} {{saludo}}</h2>
+
+<p>Años:</p>
+    <ul>
+        {% for year in years %}
+            {% if year|divisibleby:2 %} {# year|divisibleby:2 es un filtro que revisa si el año es divisible entre 2, devuelve True o False #}
+                <li>
+                    {{year}}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>

@@ -1,0 +1,1 @@
+Holi desde C:\Users\yonat\OneDrive\Desktop\Curso de Python (Master)\14-sistema-archivos/fichero-texto.txt ;3

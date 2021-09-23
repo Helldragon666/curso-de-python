@@ -1,0 +1,132 @@
+
+
+<!-- el atributo cambia el comportamiento o apariencia del HTML -->
+
+<!-- <etiqueta atributo="valor"> Texto o Datos </etiqueta> -->
+
+<!--
+<strong>Holi desde HTML ;3</strong>
+
+<h3>Holi de nuevo ;3</h3>
+-->
+
+<!DOCTYPE html> <!--Establece la version HTML que estamos utilizando-->
+<html lang="en"> <!--es donde va a estar toda la página web-->
+<head> <!--cabezera de la página web, contiene meta datos o información no visible dentro de la página web-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera web</title>
+</head>
+<body>
+    <h1>Título de mi web</h1>
+    <h2>Bienvenidos :3</h2>
+
+    <p>
+        Este es un párrafo
+    </p>
+
+    <!--br = salto de línea-->
+    <p>
+        Curabitur ut sollicitudin lacus, eu imperdiet risus. Suspendisse varius, neque sit amet semper tempor, 
+        orci erat pellentesque odio, cursus viverra nisl massa tincidunt dolor. <br> Donec nec ex elit. Etiam ut felis volutpat, 
+        ultrices arcu vitae, varius diam. Sed felis arcu, malesuada at luctus et, condimentum non tortor. <br> Nam semper, 
+        libero sit amet laoreet blandit, urna mi luctus lacus, id mattis nisl sapien ac velit. Integer pulvinar luctus placerat. 
+        Duis et felis pulvinar, malesuada urna nec, pharetra diam.
+    </p>
+    <!--hr = línea de separación-->
+    <hr>
+    <h3>Tercer encabezado</h3>
+
+    <!--strong = Texto en negritas-->
+    <!--em o i = texto en cursiva-->
+    <!--span = no hace nada-->
+    <!--blockquote = formato cita-->
+    <p>
+        <span id="resaltado" class="rojo amarillo">Curabitur ut sollicitudin lacus</span>, <strong>eu imperdiet risus. Suspendisse varius</strong>, neque sit amet semper tempor, 
+        orci erat pellentesque odio, cursus viverra nisl massa tincidunt dolor. <br> Donec nec ex elit. Etiam ut felis volutpat, 
+        ultrices arcu vitae, varius diam. Sed felis arcu, malesuada at luctus et, condimentum non tortor. <br> Nam semper, 
+        libero sit amet laoreet blandit, urna mi luctus lacus, id mattis nisl sapien ac velit. Integer pulvinar luctus placerat. 
+        Duis et felis pulvinar, <em>malesuada urna nec, pharetra diam</em>.
+
+
+        <blockquote>
+            Nunc pellentesque dolor in hendrerit porta. Morbi rutrum felis rhoncus tellus elementum, vel sagittis quam commodo. Donec et ipsum ut est maximus condimentum.
+        </blockquote>
+    </p>
+
+    <h3>Listado de frutas</h3>
+
+    <ol> <!--lista ordenada-->
+        <li>Manzana</li>
+        <li>Naranja</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+    </ol>
+
+    <ul> <!--lista desordenada-->
+        <li>Manzana</li>
+        <ul>
+            <li>Roja</li>
+            <li>Verde</li>
+        </ul>
+        <li>Naranja</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+    </ul>
+    <hr>
+
+    <h2>Imágenes en HTML</h2>
+
+    <!--alt: texto cuando la imagen no carga-->
+    <!--title: titulo de la imagen que aparece al tener el cursor sobre ella-->
+    <img src="img/low_polygonal_wolf-wallpaper-1920x1080.jpg" alt="Imagen de un lobo" title="Lobo poliginal" width="500px"> <!--height=""-->
+    <hr>
+
+    <h3>Tablas</h3>
+
+    <table border="1"> <!--border: para marcar los bordes de la tabla-->
+        <tr> <!--fila-->
+            <th>Nombre</th> <!--columna-->
+            <th>Apellidos</th> <!--th = para poner en negritas los elementos de la tabla-->
+            <th>País</th>
+        </tr>
+        <tr> <!--fila-->
+            <td colspan="2">Yon</td> <!--colspan: para expandir la columna-->
+            <td>Cervantes</td>
+            <td>México</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h3>Formulario</h3>
+
+    <form>
+        <p>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" placeholder="Escribe tu nombre">
+        </p>
+
+        <p>
+            <label for="descripcion">Descripción</label>
+            <textarea name="descripcion"></textarea>
+        </p>
+
+        <p>
+            <input type="radio" name="genero" value="Hombre">Hombre
+            <input type="radio" name="genero" value="Mujer">Mujer            
+        </p>
+
+        <p>
+            <select name="genero 2">
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
+            </select>
+        </p>
+
+        <input type="submit" value="Enviar Formulario">
+    </form>
+
+</body>
+</html>

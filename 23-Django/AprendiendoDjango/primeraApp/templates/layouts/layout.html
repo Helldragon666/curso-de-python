@@ -1,0 +1,77 @@
+{% load static %} {# para cargar la carpeta static #}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title> {% block titulo %}
+        <!--Titulo--> {% endblock %} | Sitio Web con Django
+    </title>
+</head>
+
+<body>
+
+    <!--Cabecera-->
+
+    <header>
+        <div id="logotipo">
+            <!--Logotipo de Django-->
+            <img src="{% static 'img/logo.png' %}" alt="">
+            <h1>Sitio web con Django</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'index' %}">Inicio</a> <!--<a href='/'>Inicio</a>-->
+            </li>
+            <li>
+                <a href="{% url 'crear' %}">Crear Artículo</a> <!--<a href='/'>Inicio</a>-->
+            </li>
+            <li>
+                <a href="{% url 'crearCLASS' %}">Crear Artículo (Class)</a> <!--<a href='/'>Inicio</a>-->
+            </li>
+            <li>
+                <a href="{% url 'articulos' %}">Artículos</a> <!--<a href='/'>Inicio</a>-->
+            </li>
+            <li>
+                <a href="{% url 'ruta_1' %}">Saludo</a> <!--<a href='/ruta-1'>Saludo</a>-->
+            </li>
+            <li>
+                <a href="{% url 'pagina' %}">Página de pruebas</a> <!--<a href='/pagina-prueba'>Página de pruebas</a>-->
+            </li>
+            <li>
+                <a href="{% url 'contacto' nombre='Yon' apellido='Cerv' %}">Contacto</a> <!--<a href='/contacto'>Contacto</a>-->
+                <!--<a href='/contacto/Yon/Cerv'>Contacto</a>-->
+                <!--<a href="{% url 'contacto' 'Yon' 'Cerv' %}">Contacto</a>-->
+            </li>
+        </ul>
+    </nav>
+
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
+
+    <div id="content">
+        <div class="box">
+            {% block contenido %}
+                <!--Código que viene de templates-->
+                <strong>Contenido original!!!!!</strong>
+            {% endblock %}
+        </div>
+    </div>
+
+    <footer>
+        Master en Python &copy; {% now "Y" %} {# {% now "Y" %} para mostrar el año actual de forma dinamica #}
+    </footer>
+
+</body>
+
+</html>
